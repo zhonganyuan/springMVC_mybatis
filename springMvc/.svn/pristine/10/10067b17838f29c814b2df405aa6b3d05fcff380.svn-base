@@ -1,0 +1,36 @@
+package com.wkb.activeMq.service.impl;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
+import com.wkb.activeMq.bean.MonitorMq;
+import com.wkb.activeMq.dao.MonitorMqMapper;
+import com.wkb.activeMq.service.MonitorMqService;
+import com.wkb.core.util.RemoteDataAndPage;
+@Service("monitorMqService")
+public class MonitorMqServiceImpl implements MonitorMqService{
+	@Resource(name="monitorMqMapper")
+	private MonitorMqMapper monitorMqMapper;
+	/**
+	 * 分页查询mq
+	 */
+	@Override
+	public RemoteDataAndPage listMq(MonitorMq monitorMq) {
+		RemoteDataAndPage remoteDataAndPage = new RemoteDataAndPage();
+		List<MonitorMq> list = monitorMqMapper.listPAGEMq(monitorMq);
+		remoteDataAndPage.setDataList(list);
+		remoteDataAndPage.setPage(monitorMq.getPage());
+		return remoteDataAndPage;
+	}
+	/**
+	 * 新增mq配置信息
+	 */
+	@Override
+	public int insertMq(MonitorMq monitorMq) {
+		int count = monitorMqMapper.insertSelective(monitorMq);
+		return count;
+	}
+}

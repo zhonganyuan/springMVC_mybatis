@@ -1,0 +1,57 @@
+package com.wkb.activeMq.dao;
+
+import com.wkb.activeMq.bean.MonitorMq;
+import com.wkb.core.dao.interfaces.BaseMapper;
+
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+/**
+ * 由数据库表 monitor_mq 生成
+ * 
+ */
+@Repository(value="monitorMqMapper")
+public interface MonitorMqMapper extends BaseMapper {
+    /**
+     * 本方法的操作由数据库表  monitor_mq 生成
+     * 根据主键删除表 monitor_mq 中的信息
+     */
+    int deleteByPrimaryKey(Integer id);
+
+    /**
+     * 本方法的操作由数据库表  monitor_mq 生成
+     * 向表 monitor_mq 中插入一条数据
+     */
+    int insert(MonitorMq record);
+
+    /**
+     * 本方法的操作由数据库表  monitor_mq 生成
+     * 向表 monitor_mq 中有选择的插入一条数据
+     */
+    int insertSelective(MonitorMq record);
+
+    /**
+     * 本方法的操作由数据库表  monitor_mq 生成
+     * 根据主键获取表 monitor_mq 中信息
+     */
+    MonitorMq selectByPrimaryKey(Integer id);
+
+    /**
+     * 本方法的操作由数据库表  monitor_mq 生成
+     * 根据主键有选择性的更新表 monitor_mq 数据
+     */
+    int updateByPrimaryKeySelective(MonitorMq record);
+
+    /**
+     * 本方法的操作由数据库表  monitor_mq 生成
+     * 更新表 monitor_mq 中数据
+     */
+    int updateByPrimaryKey(MonitorMq record);
+    /**
+     * 分页查询mq信息
+     * @param monitorMq
+     * @return
+     */
+	List<MonitorMq> listPAGEMq(MonitorMq monitorMq);
+}

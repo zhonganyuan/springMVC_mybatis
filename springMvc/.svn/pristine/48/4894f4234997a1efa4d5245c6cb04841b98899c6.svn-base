@@ -1,0 +1,39 @@
+package com.wkb.nginx.controller;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.wkb.core.util.RemoteDataAndPage;
+import com.wkb.nginx.bean.MonitorNginx;
+import com.wkb.nginx.service.MonitorNginxService;
+import com.wkb.system.core.controller.SystemBaseController;
+
+@Controller
+@RequestMapping("monitorNginx")
+public class MonitorNginxController extends SystemBaseController{
+	@Resource(name="monitorNginxService")
+	private MonitorNginxService monitorNginxService;
+	private final String viewpath="/monitor/nginx";
+	/**
+	 * nginx 列表
+	 * @param monitorNginx
+	 * @return
+	 */
+	@RequestMapping("/list")
+	public ModelAndView list(MonitorNginx monitorNginx){
+		Map<String,Object> map = new HashMap<String,Object>();
+		RemoteDataAndPage remoteDataAndPage = monitorNginxService.listNginx(monitorNginx);
+		List<MonitorNginx> list = (List<MonitorNginx>) remoteDataAndPage.getDataList();
+		monitorNginx.setPage(monitorNginx.getPage());
+		map.put("list", list);
+		map.put("nginx", monitorNginx);
+		return new ModelAndView(viewpath+"/list", map);
+	}
+}

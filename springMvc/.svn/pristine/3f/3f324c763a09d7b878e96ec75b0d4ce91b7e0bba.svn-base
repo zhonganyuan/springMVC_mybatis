@@ -1,0 +1,57 @@
+package com.wkb.nginx.dao;
+
+import com.wkb.core.dao.interfaces.BaseMapper;
+import com.wkb.nginx.bean.MonitorNginx;
+
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+/**
+ * 由数据库表 monitor_nginx 生成
+ * 
+ */
+@Repository(value="monitorNginxMapper")
+public interface MonitorNginxMapper extends BaseMapper {
+    /**
+     * 本方法的操作由数据库表  monitor_nginx 生成
+     * 根据主键删除表 monitor_nginx 中的信息
+     */
+    int deleteByPrimaryKey(Integer id);
+
+    /**
+     * 本方法的操作由数据库表  monitor_nginx 生成
+     * 向表 monitor_nginx 中插入一条数据
+     */
+    int insert(MonitorNginx record);
+
+    /**
+     * 本方法的操作由数据库表  monitor_nginx 生成
+     * 向表 monitor_nginx 中有选择的插入一条数据
+     */
+    int insertSelective(MonitorNginx record);
+
+    /**
+     * 本方法的操作由数据库表  monitor_nginx 生成
+     * 根据主键获取表 monitor_nginx 中信息
+     */
+    MonitorNginx selectByPrimaryKey(Integer id);
+
+    /**
+     * 本方法的操作由数据库表  monitor_nginx 生成
+     * 根据主键有选择性的更新表 monitor_nginx 数据
+     */
+    int updateByPrimaryKeySelective(MonitorNginx record);
+
+    /**
+     * 本方法的操作由数据库表  monitor_nginx 生成
+     * 更新表 monitor_nginx 中数据
+     */
+    int updateByPrimaryKey(MonitorNginx record);
+    /**
+     * 分页获取nginx 信息
+     * @param monitorNginx
+     * @return
+     */
+	List<MonitorNginx> listPAGEMonitor(MonitorNginx monitorNginx);
+}

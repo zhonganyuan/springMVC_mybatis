@@ -1,0 +1,19 @@
+package com.wkb.nginx.service;
+
+import com.wkb.core.util.RemoteDataAndPage;
+import com.wkb.nginx.bean.MonitorNginx;
+
+public interface MonitorNginxService {
+	/**
+	 * 分页查询nginx 信息 
+	 * @param monitorNginx
+	 * @return
+	 */
+	RemoteDataAndPage listNginx(MonitorNginx monitorNginx);
+	/**
+	 * 新增nginx信息
+	 * @param monitorNginx
+	 * @return
+	 */
+	public int insertNginx(MonitorNginx monitorNginx);
+}

@@ -1,0 +1,13 @@
+package com.wkb.operate.service;
+
+import com.wkb.core.util.RemoteDataAndPage;
+import com.wkb.operate.bean.MonitorOperate;
+
+public interface MonitorOperateService {
+	/**
+	 * 分页查询操作
+	 * @param monitorOperate
+	 * @return
+	 */
+	RemoteDataAndPage listOperate(MonitorOperate monitorOperate);
+}

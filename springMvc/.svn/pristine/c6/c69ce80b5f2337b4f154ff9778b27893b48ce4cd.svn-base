@@ -1,0 +1,29 @@
+package com.wkb.operate.service.impl;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
+import com.wkb.core.util.RemoteDataAndPage;
+import com.wkb.operate.bean.MonitorOperate;
+import com.wkb.operate.dao.MonitorOperateMapper;
+import com.wkb.operate.service.MonitorOperateService;
+@Service("monitorOperateService")
+public class MonitorOperateServiceImpl implements MonitorOperateService {
+	@Resource(name="monitorOperateMapper")
+	private MonitorOperateMapper monitorOperateMapper;
+	/**
+	 *  分页查询操作记录
+	 */
+	@Override
+	public RemoteDataAndPage listOperate(MonitorOperate monitorOperate) {
+		RemoteDataAndPage remoteDataAndPage = new RemoteDataAndPage();
+		List<MonitorOperate> list = monitorOperateMapper.listPAGEOperate(monitorOperate);
+		remoteDataAndPage.setDataList(list);
+		remoteDataAndPage.setPage(monitorOperate.getPage());
+		return remoteDataAndPage;
+	}
+
+}

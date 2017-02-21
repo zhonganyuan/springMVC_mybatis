@@ -1,0 +1,51 @@
+package com.wkb.activeMq.controller;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.wkb.activeMq.bean.MonitorMq;
+import com.wkb.activeMq.service.MonitorMqService;
+import com.wkb.core.util.RemoteDataAndPage;
+
+@Controller
+@RequestMapping(value="/monitorMq")
+public class MonitorMqController {
+	@Resource(name="monitorMqService")
+	private MonitorMqService monitorMqService;
+	private final String viewpath="/monitor/mq";
+	/**
+	 * 分页查询mq
+	 * @param monitorMq
+	 * @return
+	 */
+	@RequestMapping(value="/list")
+	public ModelAndView list(MonitorMq monitorMq){
+		Map<String,Object> map = new HashMap<String,Object>();
+		RemoteDataAndPage remoteDataAndPage = monitorMqService.listMq(monitorMq);
+		List<MonitorMq> list = (List<MonitorMq>) remoteDataAndPage.getDataList();
+		monitorMq.setPage(remoteDataAndPage.getPage());
+		map.put("list", list);
+		map.put("monitorMq", monitorMq);
+		return new ModelAndView(viewpath+"/list", map);
+	}
+	
+	/**
+	 * 新增mq 配置信息
+	 * @param monitorMq
+	 * @return
+	 */
+	@RequestMapping(value="/insertMq")
+	@ResponseBody
+	public String insertMq(MonitorMq monitorMq){
+		return viewpath;
+		
+	}
+}

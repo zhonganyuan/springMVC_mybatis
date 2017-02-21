@@ -1,0 +1,7 @@
+#develop
+project.env=test
+
+#----------------------jndi------------------------
+jndi.master=java:comp/env/jdbc/master
+#jndi.slave=java:comp/env/jdbc/slave
+jndi.logs=java\:comp/env/jdbc/wkb_logs

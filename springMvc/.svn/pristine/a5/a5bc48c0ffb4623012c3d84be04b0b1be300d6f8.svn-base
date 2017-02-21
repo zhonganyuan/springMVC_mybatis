@@ -1,0 +1,260 @@
+package com.wkb.nginx.bean;
+
+import java.util.Date;
+
+import com.wkb.core.util.Page;
+
+/**
+ * 由数据库表 monitor_nginx 生成
+ * 
+ */
+public class MonitorNginx {
+    /**
+     * 由表字段 monitor_nginx.id 生成
+     * nginx 基本信息主键
+     */
+    private Integer id;
+
+    /**
+     * 由表字段 monitor_nginx.inner_code 生成
+     * nginx 内部关联编码
+     */
+    private Long innerCode;
+
+    /**
+     * 由表字段 monitor_nginx.ip 生成
+     * nginx 主机ip
+     */
+    private String ip;
+
+    /**
+     * 由表字段 monitor_nginx.host 生成
+     * nginx 主机
+     */
+    private String host;
+
+    /**
+     * 由表字段 monitor_nginx.port 生成
+     * nginx 端口
+     */
+    private String port;
+
+    /**
+     * 由表字段 monitor_nginx.creator 生成
+     * 创建人
+     */
+    private String creator;
+
+    /**
+     * 由表字段 monitor_nginx.create_time 生成
+     * 创建时间
+     */
+    private Date createTime;
+
+    /**
+     * 由表字段 monitor_nginx.updator 生成
+     * 更新人
+     */
+    private String updator;
+
+    /**
+     * 由表字段 monitor_nginx.update_time 生成
+     * 更新时间
+     */
+    private Date updateTime;
+
+    /**
+     * 由表字段 monitor_nginx.threshold 生成
+     * 阀值
+     */
+    private String threshold;
+    private Page page;//分页信息
+    /**
+     * 本方法返回数据表字段  monitor_nginx.id 的值
+     * nginx 基本信息主键
+     * @return the value of monitor_nginx.id
+     */
+    public Integer getId() {
+        return id;
+    }
+
+    /**
+     * 本方法设置数据表字段 monitor_nginx.id 的值
+     * nginx 基本信息主键
+     * @param id the value for monitor_nginx.id
+     */
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    /**
+     * 本方法返回数据表字段  monitor_nginx.inner_code 的值
+     * nginx 内部关联编码
+     * @return the value of monitor_nginx.inner_code
+     */
+    public Long getInnerCode() {
+        return innerCode;
+    }
+
+    /**
+     * 本方法设置数据表字段 monitor_nginx.inner_code 的值
+     * nginx 内部关联编码
+     * @param innerCode the value for monitor_nginx.inner_code
+     */
+    public void setInnerCode(Long innerCode) {
+        this.innerCode = innerCode;
+    }
+
+    /**
+     * 本方法返回数据表字段  monitor_nginx.ip 的值
+     * nginx 主机ip
+     * @return the value of monitor_nginx.ip
+     */
+    public String getIp() {
+        return ip;
+    }
+
+    /**
+     * 本方法设置数据表字段 monitor_nginx.ip 的值
+     * nginx 主机ip
+     * @param ip the value for monitor_nginx.ip
+     */
+    public void setIp(String ip) {
+        this.ip = ip == null ? null : ip.trim();
+    }
+
+    /**
+     * 本方法返回数据表字段  monitor_nginx.host 的值
+     * nginx 主机
+     * @return the value of monitor_nginx.host
+     */
+    public String getHost() {
+        return host;
+    }
+
+    /**
+     * 本方法设置数据表字段 monitor_nginx.host 的值
+     * nginx 主机
+     * @param host the value for monitor_nginx.host
+     */
+    public void setHost(String host) {
+        this.host = host == null ? null : host.trim();
+    }
+
+    /**
+     * 本方法返回数据表字段  monitor_nginx.port 的值
+     * nginx 端口
+     * @return the value of monitor_nginx.port
+     */
+    public String getPort() {
+        return port;
+    }
+
+    /**
+     * 本方法设置数据表字段 monitor_nginx.port 的值
+     * nginx 端口
+     * @param port the value for monitor_nginx.port
+     */
+    public void setPort(String port) {
+        this.port = port == null ? null : port.trim();
+    }
+
+    /**
+     * 本方法返回数据表字段  monitor_nginx.creator 的值
+     * 创建人
+     * @return the value of monitor_nginx.creator
+     */
+    public String getCreator() {
+        return creator;
+    }
+
+    /**
+     * 本方法设置数据表字段 monitor_nginx.creator 的值
+     * 创建人
+     * @param creator the value for monitor_nginx.creator
+     */
+    public void setCreator(String creator) {
+        this.creator = creator == null ? null : creator.trim();
+    }
+
+    /**
+     * 本方法返回数据表字段  monitor_nginx.create_time 的值
+     * 创建时间
+     * @return the value of monitor_nginx.create_time
+     */
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    /**
+     * 本方法设置数据表字段 monitor_nginx.create_time 的值
+     * 创建时间
+     * @param createTime the value for monitor_nginx.create_time
+     */
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    /**
+     * 本方法返回数据表字段  monitor_nginx.updator 的值
+     * 更新人
+     * @return the value of monitor_nginx.updator
+     */
+    public String getUpdator() {
+        return updator;
+    }
+
+    /**
+     * 本方法设置数据表字段 monitor_nginx.updator 的值
+     * 更新人
+     * @param updator the value for monitor_nginx.updator
+     */
+    public void setUpdator(String updator) {
+        this.updator = updator == null ? null : updator.trim();
+    }
+
+    /**
+     * 本方法返回数据表字段  monitor_nginx.update_time 的值
+     * 更新时间
+     * @return the value of monitor_nginx.update_time
+     */
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    /**
+     * 本方法设置数据表字段 monitor_nginx.update_time 的值
+     * 更新时间
+     * @param updateTime the value for monitor_nginx.update_time
+     */
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    /**
+     * 本方法返回数据表字段  monitor_nginx.threshold 的值
+     * 阀值
+     * @return the value of monitor_nginx.threshold
+     */
+    public String getThreshold() {
+        return threshold;
+    }
+
+    /**
+     * 本方法设置数据表字段 monitor_nginx.threshold 的值
+     * 阀值
+     * @param threshold the value for monitor_nginx.threshold
+     */
+    public void setThreshold(String threshold) {
+        this.threshold = threshold == null ? null : threshold.trim();
+    }
+
+	public Page getPage() {
+		return page;
+	}
+
+	public void setPage(Page page) {
+		this.page = page;
+	}
+    
+}

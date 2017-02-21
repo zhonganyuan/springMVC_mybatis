@@ -1,0 +1,37 @@
+package com.wkb.nginx.service.impl;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
+import com.wkb.core.util.RemoteDataAndPage;
+import com.wkb.nginx.bean.MonitorNginx;
+import com.wkb.nginx.dao.MonitorNginxMapper;
+import com.wkb.nginx.service.MonitorNginxService;
+@Service("monitorNginxService")
+public class MonitorNginxServiceImpl implements MonitorNginxService{
+	@Resource(name="monitorNginxMapper")
+	private MonitorNginxMapper monitorNginxMapper;
+	/**
+	 * 分页查询nginx信息
+	 */
+	@Override
+	public RemoteDataAndPage listNginx(MonitorNginx monitorNginx) {
+		RemoteDataAndPage remoteDataAndPage = new RemoteDataAndPage();
+		List<MonitorNginx> list = monitorNginxMapper.listPAGEMonitor(monitorNginx);
+		remoteDataAndPage.setDataList(list);
+		remoteDataAndPage.setPage(monitorNginx.getPage());
+		return remoteDataAndPage;
+	}
+	
+	/**
+	 * 新增nginx信息
+	 */
+	@Override
+	public int insertNginx(MonitorNginx monitorNginx) {
+		int count = monitorNginxMapper.insertSelective(monitorNginx);
+		return count;
+	}
+}

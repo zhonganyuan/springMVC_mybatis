@@ -1,0 +1,273 @@
+package com.wkb.nginx.bean;
+
+import java.util.Date;
+
+/**
+ * 由数据库表 monitor_nginx_info 生成
+ * 
+ */
+public class MonitorNginxInfo {
+    /**
+     * 由表字段 monitor_nginx_info.id 生成
+     * nginx 统计详情主键id
+     */
+    private Integer id;
+
+    /**
+     * 由表字段 monitor_nginx_info.inner_code 生成
+     * nginx 内部关联编码
+     */
+    private Long innerCode;
+
+    /**
+     * 由表字段 monitor_nginx_info.active_connection 生成
+     * Nginx 正处理的活动连接数
+     */
+    private Integer activeConnection;
+
+    /**
+     * 由表字段 monitor_nginx_info.accepts 生成
+     * 处理的连接数
+     */
+    private Integer accepts;
+
+    /**
+     * 由表字段 monitor_nginx_info. handled 生成
+     * 成功创建握手次数
+     */
+    private Integer handled;
+
+    /**
+     * 由表字段 monitor_nginx_info.requests 生成
+     * 处理请求数
+     */
+    private Integer requests;
+
+    /**
+     * 由表字段 monitor_nginx_info.reading 生成
+     * 读取客户端的Header信息数
+     */
+    private Integer reading;
+
+    /**
+     * 由表字段 monitor_nginx_info.writing 生成
+     * 响应数据到客户端的Header信息数
+     */
+    private Integer writing;
+
+    /**
+     * 由表字段 monitor_nginx_info.waiting 生成
+     * 开启keep-alive后等候下一次请求指令的驻留连接
+     */
+    private Integer waiting;
+
+    /**
+     * 由表字段 monitor_nginx_info.create_time 生成
+     * 创建时间
+     */
+    private Date createTime;
+
+    /**
+     * 由表字段 monitor_nginx_info.creator 生成
+     * 创建人
+     */
+    private String creator;
+
+    /**
+     * 本方法返回数据表字段  monitor_nginx_info.id 的值
+     * nginx 统计详情主键id
+     * @return the value of monitor_nginx_info.id
+     */
+    public Integer getId() {
+        return id;
+    }
+
+    /**
+     * 本方法设置数据表字段 monitor_nginx_info.id 的值
+     * nginx 统计详情主键id
+     * @param id the value for monitor_nginx_info.id
+     */
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    /**
+     * 本方法返回数据表字段  monitor_nginx_info.inner_code 的值
+     * nginx 内部关联编码
+     * @return the value of monitor_nginx_info.inner_code
+     */
+    public Long getInnerCode() {
+        return innerCode;
+    }
+
+    /**
+     * 本方法设置数据表字段 monitor_nginx_info.inner_code 的值
+     * nginx 内部关联编码
+     * @param innerCode the value for monitor_nginx_info.inner_code
+     */
+    public void setInnerCode(Long innerCode) {
+        this.innerCode = innerCode;
+    }
+
+    /**
+     * 本方法返回数据表字段  monitor_nginx_info.active_connection 的值
+     * Nginx 正处理的活动连接数
+     * @return the value of monitor_nginx_info.active_connection
+     */
+    public Integer getActiveConnection() {
+        return activeConnection;
+    }
+
+    /**
+     * 本方法设置数据表字段 monitor_nginx_info.active_connection 的值
+     * Nginx 正处理的活动连接数
+     * @param activeConnection the value for monitor_nginx_info.active_connection
+     */
+    public void setActiveConnection(Integer activeConnection) {
+        this.activeConnection = activeConnection;
+    }
+
+    /**
+     * 本方法返回数据表字段  monitor_nginx_info.accepts 的值
+     * 处理的连接数
+     * @return the value of monitor_nginx_info.accepts
+     */
+    public Integer getAccepts() {
+        return accepts;
+    }
+
+    /**
+     * 本方法设置数据表字段 monitor_nginx_info.accepts 的值
+     * 处理的连接数
+     * @param accepts the value for monitor_nginx_info.accepts
+     */
+    public void setAccepts(Integer accepts) {
+        this.accepts = accepts;
+    }
+
+    /**
+     * 本方法返回数据表字段  monitor_nginx_info. handled 的值
+     * 成功创建握手次数
+     * @return the value of monitor_nginx_info. handled
+     */
+    public Integer getHandled() {
+        return handled;
+    }
+
+    /**
+     * 本方法设置数据表字段 monitor_nginx_info. handled 的值
+     * 成功创建握手次数
+     * @param handled the value for monitor_nginx_info. handled
+     */
+    public void setHandled(Integer handled) {
+        this.handled = handled;
+    }
+
+    /**
+     * 本方法返回数据表字段  monitor_nginx_info.requests 的值
+     * 处理请求数
+     * @return the value of monitor_nginx_info.requests
+     */
+    public Integer getRequests() {
+        return requests;
+    }
+
+    /**
+     * 本方法设置数据表字段 monitor_nginx_info.requests 的值
+     * 处理请求数
+     * @param requests the value for monitor_nginx_info.requests
+     */
+    public void setRequests(Integer requests) {
+        this.requests = requests;
+    }
+
+    /**
+     * 本方法返回数据表字段  monitor_nginx_info.reading 的值
+     * 读取客户端的Header信息数
+     * @return the value of monitor_nginx_info.reading
+     */
+    public Integer getReading() {
+        return reading;
+    }
+
+    /**
+     * 本方法设置数据表字段 monitor_nginx_info.reading 的值
+     * 读取客户端的Header信息数
+     * @param reading the value for monitor_nginx_info.reading
+     */
+    public void setReading(Integer reading) {
+        this.reading = reading;
+    }
+
+    /**
+     * 本方法返回数据表字段  monitor_nginx_info.writing 的值
+     * 响应数据到客户端的Header信息数
+     * @return the value of monitor_nginx_info.writing
+     */
+    public Integer getWriting() {
+        return writing;
+    }
+
+    /**
+     * 本方法设置数据表字段 monitor_nginx_info.writing 的值
+     * 响应数据到客户端的Header信息数
+     * @param writing the value for monitor_nginx_info.writing
+     */
+    public void setWriting(Integer writing) {
+        this.writing = writing;
+    }
+
+    /**
+     * 本方法返回数据表字段  monitor_nginx_info.waiting 的值
+     * 开启keep-alive后等候下一次请求指令的驻留连接
+     * @return the value of monitor_nginx_info.waiting
+     */
+    public Integer getWaiting() {
+        return waiting;
+    }
+
+    /**
+     * 本方法设置数据表字段 monitor_nginx_info.waiting 的值
+     * 开启keep-alive后等候下一次请求指令的驻留连接
+     * @param waiting the value for monitor_nginx_info.waiting
+     */
+    public void setWaiting(Integer waiting) {
+        this.waiting = waiting;
+    }
+
+    /**
+     * 本方法返回数据表字段  monitor_nginx_info.create_time 的值
+     * 创建时间
+     * @return the value of monitor_nginx_info.create_time
+     */
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    /**
+     * 本方法设置数据表字段 monitor_nginx_info.create_time 的值
+     * 创建时间
+     * @param createTime the value for monitor_nginx_info.create_time
+     */
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    /**
+     * 本方法返回数据表字段  monitor_nginx_info.creator 的值
+     * 创建人
+     * @return the value of monitor_nginx_info.creator
+     */
+    public String getCreator() {
+        return creator;
+    }
+
+    /**
+     * 本方法设置数据表字段 monitor_nginx_info.creator 的值
+     * 创建人
+     * @param creator the value for monitor_nginx_info.creator
+     */
+    public void setCreator(String creator) {
+        this.creator = creator == null ? null : creator.trim();
+    }
+}

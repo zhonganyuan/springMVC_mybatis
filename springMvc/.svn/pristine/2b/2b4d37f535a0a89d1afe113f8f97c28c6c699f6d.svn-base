@@ -1,0 +1,164 @@
+package com.wkb.operate.bean;
+
+import java.util.Date;
+
+import com.wkb.core.util.Page;
+
+/**
+ * 由数据库表 monitor_operate 生成
+ * 
+ */
+public class MonitorOperate {
+    /**
+     * 由表字段 monitor_operate.id 生成
+     * 用户操作主键id
+     */
+    private Integer id;
+
+    /**
+     * 由表字段 monitor_operate.type 生成
+     * 操作类型
+     */
+    private Integer type;
+
+    /**
+     * 由表字段 monitor_operate.inner_code 生成
+     * 服务关联编码（例如：tomcat inner_code or redis inner_code ）
+     */
+    private Long innerCode;
+
+    /**
+     * 由表字段 monitor_operate.operate_note 生成
+     * 操作记录
+     */
+    private String operateNote;
+
+    /**
+     * 由表字段 monitor_operate.operator 生成
+     * 操作人
+     */
+    private String operator;
+
+    /**
+     * 由表字段 monitor_operate.operate_time 生成
+     * 操作时间
+     */
+    private Date operateTime;
+    private Page page;//分页对象
+    /**
+     * 本方法返回数据表字段  monitor_operate.id 的值
+     * 用户操作主键id
+     * @return the value of monitor_operate.id
+     */
+    public Integer getId() {
+        return id;
+    }
+
+    /**
+     * 本方法设置数据表字段 monitor_operate.id 的值
+     * 用户操作主键id
+     * @param id the value for monitor_operate.id
+     */
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    /**
+     * 本方法返回数据表字段  monitor_operate.type 的值
+     * 操作类型
+     * @return the value of monitor_operate.type
+     */
+    public Integer getType() {
+        return type;
+    }
+
+    /**
+     * 本方法设置数据表字段 monitor_operate.type 的值
+     * 操作类型
+     * @param type the value for monitor_operate.type
+     */
+    public void setType(Integer type) {
+        this.type = type;
+    }
+
+    /**
+     * 本方法返回数据表字段  monitor_operate.inner_code 的值
+     * 服务关联编码（例如：tomcat inner_code or redis inner_code ）
+     * @return the value of monitor_operate.inner_code
+     */
+    public Long getInnerCode() {
+        return innerCode;
+    }
+
+    /**
+     * 本方法设置数据表字段 monitor_operate.inner_code 的值
+     * 服务关联编码（例如：tomcat inner_code or redis inner_code ）
+     * @param innerCode the value for monitor_operate.inner_code
+     */
+    public void setInnerCode(Long innerCode) {
+        this.innerCode = innerCode;
+    }
+
+    /**
+     * 本方法返回数据表字段  monitor_operate.operate_note 的值
+     * 操作记录
+     * @return the value of monitor_operate.operate_note
+     */
+    public String getOperateNote() {
+        return operateNote;
+    }
+
+    /**
+     * 本方法设置数据表字段 monitor_operate.operate_note 的值
+     * 操作记录
+     * @param operateNote the value for monitor_operate.operate_note
+     */
+    public void setOperateNote(String operateNote) {
+        this.operateNote = operateNote == null ? null : operateNote.trim();
+    }
+
+    /**
+     * 本方法返回数据表字段  monitor_operate.operator 的值
+     * 操作人
+     * @return the value of monitor_operate.operator
+     */
+    public String getOperator() {
+        return operator;
+    }
+
+    /**
+     * 本方法设置数据表字段 monitor_operate.operator 的值
+     * 操作人
+     * @param operator the value for monitor_operate.operator
+     */
+    public void setOperator(String operator) {
+        this.operator = operator == null ? null : operator.trim();
+    }
+
+    /**
+     * 本方法返回数据表字段  monitor_operate.operate_time 的值
+     * 操作时间
+     * @return the value of monitor_operate.operate_time
+     */
+    public Date getOperateTime() {
+        return operateTime;
+    }
+
+    /**
+     * 本方法设置数据表字段 monitor_operate.operate_time 的值
+     * 操作时间
+     * @param operateTime the value for monitor_operate.operate_time
+     */
+    public void setOperateTime(Date operateTime) {
+        this.operateTime = operateTime;
+    }
+
+	public Page getPage() {
+		return page;
+	}
+
+	public void setPage(Page page) {
+		this.page = page;
+	}
+    
+}

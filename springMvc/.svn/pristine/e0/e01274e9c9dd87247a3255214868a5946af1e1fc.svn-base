@@ -1,0 +1,39 @@
+package com.wkb.operate.controller;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.wkb.core.util.RemoteDataAndPage;
+import com.wkb.operate.bean.MonitorOperate;
+import com.wkb.operate.service.MonitorOperateService;
+import com.wkb.system.core.controller.SystemBaseController;
+
+@Controller
+@RequestMapping("/monitorOperate")
+public class MonitorOperateController extends SystemBaseController{
+	@Resource(name="monitorOperateService")
+	private MonitorOperateService monitorOperateService;
+	private final String viewpath="/monitor/operate";
+	/**
+	 * 操作列表
+	 * @param monitorOperate
+	 * @return
+	 */
+	@RequestMapping(value="/list")
+	public ModelAndView list(MonitorOperate monitorOperate){
+		Map<String,Object> map = new HashMap<String,Object>();
+		RemoteDataAndPage remoteDataAndPage = monitorOperateService.listOperate(monitorOperate);
+		List<MonitorOperate> list = (List<MonitorOperate>) remoteDataAndPage.getDataList();
+		monitorOperate.setPage(remoteDataAndPage.getPage());
+		map.put("list", list);
+		map.put("operate", monitorOperate);
+		return new ModelAndView(viewpath+"/list", map);
+	}
+}

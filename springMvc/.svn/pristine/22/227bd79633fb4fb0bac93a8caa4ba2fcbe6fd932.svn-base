@@ -1,0 +1,19 @@
+package com.wkb.activeMq.service;
+
+import com.wkb.activeMq.bean.MonitorMq;
+import com.wkb.core.util.RemoteDataAndPage;
+
+public interface MonitorMqService {
+	/**
+	 * 分页查询mq
+	 * @param monitorMq
+	 * @return
+	 */
+	RemoteDataAndPage listMq(MonitorMq monitorMq);
+	/**
+	 * 新增mq配置信息
+	 * @param monitorMq
+	 * @return
+	 */
+	int insertMq(MonitorMq monitorMq);
+}
